@@ -1,3 +1,4 @@
+
 #version 130
  
 uniform vec2 u_resolution;
@@ -58,14 +59,14 @@ void set_random(vec2 uv) {
     R_STATE.w = uint(u_seed2.y + uvRes.y);
 }
 
-vec2 get_cord(vec2 cord) {
-    vec2 ans = (cord - 0.5) * u_resolution / max(u_resolution.x, u_resolution.y) + u_offset.xy;
-    set_random(ans);
+vec3 get_cord(vec2 cord) {
+    vec3 ans = vec3(1.0, (cord - 0.5) * u_resolution / max(u_resolution.x, u_resolution.y)) * u_offset;
+    set_random(ans.yz);
     return ans;
 }
 
-vec3 get_dir(vec2 cord) {
-    vec3 ans = normalize(vec3(u_offset.z, cord));
+vec3 get_dir(vec3 cord) {
+    vec3 ans = normalize(cord);
     ans.zx *= rot(-u_angle.y);
     ans.xy *= rot(u_angle.x);
     return ans;
@@ -272,7 +273,7 @@ vec3 traceRay(vec3 ro, vec3 rd) {
 }
 
 void main() {
-    vec2 cord = get_cord(gl_TexCoord[0].xy);
+    vec3 cord = get_cord(gl_TexCoord[0].xy);
     vec3 color = vec3(0.0);
     for (int i = 0; i < u_samples; i++) {
         color += traceRay(u_pos, get_dir(cord));
