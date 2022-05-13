@@ -96,7 +96,9 @@ vec3 randomOnSphere() {
     return vec3(x, y, z);
 }
 
-vec2 sphIntersect(in vec3 ro, in vec3 rd, float ra) {
+// sphere centered in (0, 0, 0), with radius ra, ro, rd - beginning and direction of the ray
+
+vec2 sphIntersect(in vec3 ro, in vec3 rd, float ra) { 
     float b = dot(ro, rd);
     float c = dot(ro, ro) - ra * ra;
     float h = b * b - c;
@@ -106,6 +108,8 @@ vec2 sphIntersect(in vec3 ro, in vec3 rd, float ra) {
     h = sqrt(h);
     return vec2(-b - h, -b + h);
 }
+
+// box with left-lower angle in (0, 0, 0), with sizes rad 
 
 vec2 boxIntersection(in vec3 ro, in vec3 rd, in vec3 rad, out vec3 oN)  {
     vec3 m = 1.0 / rd;
@@ -122,9 +126,13 @@ vec2 boxIntersection(in vec3 ro, in vec3 rd, in vec3 rad, out vec3 oN)  {
     return vec2(tN, tF);
 }
 
+//intersection of ray and plane, p.xyz normalized
+
 float plaIntersect(in vec3 ro, in vec3 rd, in vec4 p) {
     return -(dot(ro, p.xyz) + p.w) / dot(rd, p.xyz);
 }
+
+//intersection of ray and triangle with vertices v0, v1, v2
 
 vec3 triIntersection(in vec3 ro, in vec3 rd, in vec3 v0, in vec3 v1, in vec3 v2) {
     vec3 v1v0 = v1 - v0;
@@ -150,6 +158,8 @@ vec3 getSky(vec3 rd) {
     return clamp(sun + col * 0.01, 0.0, 1.0);
 }
 
+//universal intersection for primitives
+
 float[9] colliderIntersection(vec3 ro, vec3 rd) {
     vec4 col;
     vec2 minIt = vec2(u_max_dist);
@@ -157,7 +167,7 @@ float[9] colliderIntersection(vec3 ro, vec3 rd) {
     vec3 n;
 
     for (int i = 0; i < u_sph_num; i++) {
-        it = sphIntersect(ro - u_sph_cord[i].xyz, rd, u_sph_cord[i].w);
+        it = sphIntersect(ro - u_sph_cord[i].xyz, rd, u_sph_cord[i].w); // move the center of sphere to (0, 0, 0)
         if (it.x > 0.0 && it.x < minIt.x) {
             minIt = it;
             vec3 itPos = ro + rd * it.x;
