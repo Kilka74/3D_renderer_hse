@@ -1,14 +1,24 @@
 # 3D_renderer_hse
 
-Программный проект 2021-2022
-Сделали Коля и Арслан
+HSE AMI CS course program project 2022
 
-Сборка:
-``g++ Main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system -O2``
 
-Запуск: ``./sfml-app``
+# Make
+To build it just run ``make``
+You can run ``make clean to delete make auxiliary files``
 
-Управление: ``WASD`` - передвижения относительно позиции камеры, ``Space/C`` - передвижение вверх/вниз,
-``Arrows`` - управление камерой, ``Period/Comma`` - изменение позиции наблюдателя относительно экрана, 
-``Quote/Semicolon/LBracket/RBracket`` - искажение экрана, ``Enter`` - сброс всех параметров до начальных,
-``Esc`` - появится курсор и можно будет закрыть окно с приложением
+# Run
+To start the program just run ``./sfml-app``
+
+
+``WASD`` - movement relative to the camera position
+``Space/C`` - vertical camera movement
+``Arrows`` - camera control
+``Period/Comma`` - changing the position of the observer relative to the screen 
+``Quote/Semicolon/LBracket/RBracket`` - screen distorshion
+``Enter`` - reset all,
+``Esc`` - show coursor to close the window
+
+# Screenshots
+
+![Screenshot1](screenshots/screenshot1.png)
