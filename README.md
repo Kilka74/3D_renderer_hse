@@ -1,4 +1,6 @@
 # 3D_renderer_hse
+![Lines of code](https://img.shields.io/tokei/lines/github/MCJOHN974/3D_renderer_hse)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MCJOHN974/3D_renderer_hse/blob/master/LICENSE.txt)
 
 HSE AMI CS course program project 2022
 
