@@ -1,9 +1,11 @@
-# 3D_renderer_hse
 <img alt="logo" src="https://github.com/MCJOHN974/3D_renderer_hse/screenshots/badge" height="100px" />
+
 ![Lines of code](https://img.shields.io/tokei/lines/github/MCJOHN974/3D_renderer_hse)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MCJOHN974/3D_renderer_hse/blob/master/LICENSE.txt)
 
-HSE AMI CS course program project 2022
+
+# 3D_renderer_hse
+HSE AMI CS course program project 2022. An implementation of ray tracing algorithm.
 
 
 # Make
