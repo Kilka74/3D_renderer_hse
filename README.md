@@ -1,4 +1,4 @@
-<img alt="logo" src="https://github.com/MCJOHN974/3D_renderer_hse/screenshots/badge.svg" height="100px" />
+<img alt="logo" src="https://github.com/MCJOHN974/3D_renderer_hse/blob/main/screenshots/badge.svg" height="100px" />
 
 ![Lines of code](https://img.shields.io/tokei/lines/github/MCJOHN974/3D_renderer_hse)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MCJOHN974/3D_renderer_hse/blob/master/LICENSE.txt)
