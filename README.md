@@ -1,14 +1,29 @@
+<img alt="logo" src="https://github.com/MCJOHN974/3D_renderer_hse/blob/main/screenshots/badge.png" height="200px" />
+
+![Lines of code](https://img.shields.io/tokei/lines/github/MCJOHN974/3D_renderer_hse)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MCJOHN974/3D_renderer_hse/blob/master/LICENSE.txt)
+
+
 # 3D_renderer_hse
+HSE AMI CS course program project 2022. An implementation of ray tracing algorithm.
 
-Программный проект 2021-2022
-Сделали Коля и Арслан
 
-Сборка:
-``g++ Main.cpp -o sfml-app -lsfml-graphics -lsfml-window -lsfml-system -O2``
+# Make
+To build it just run ``make``
+You can run ``make clean`` to delete make auxiliary files
 
-Запуск: ``./sfml-app``
+# Run
+To start the program just run ``./bin/sfml-app``
 
-Управление: ``WASD`` - передвижения относительно позиции камеры, ``Space/C`` - передвижение вверх/вниз,
-``Arrows`` - управление камерой, ``Period/Comma`` - изменение позиции наблюдателя относительно экрана, 
-``Quote/Semicolon/LBracket/RBracket`` - искажение экрана, ``Enter`` - сброс всех параметров до начальных,
-``Esc`` - появится курсор и можно будет закрыть окно с приложением
+
+``WASD`` - movement relative to the camera position
+``Space/C`` - vertical camera movement
+``Arrows`` - camera control
+``Period/Comma`` - changing the position of the observer relative to the screen 
+``Quote/Semicolon/LBracket/RBracket`` - screen distorshion
+``Enter`` - reset all,
+``Esc`` - show coursor to close the window
+
+# Screenshots
+
+![Screenshot1](screenshots/screenshot1.png)
