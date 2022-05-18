@@ -10,10 +10,10 @@ HSE AMI CS course program project 2022. An implementation of ray tracing algorit
 
 # Make
 To build it just run ``make``
-You can run ``make clean to delete make auxiliary files``
+You can run ``makeёё clean to delete make auxiliary files
 
 # Run
-To start the program just run ``./sfml-app``
+To start the program just run ``./bin/sfml-app``
 
 
 ``WASD`` - movement relative to the camera position
